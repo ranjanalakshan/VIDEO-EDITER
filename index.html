@@ -1,0 +1,532 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master | Professional Video Editor & Colorist Portfolio</title>
+  <meta name="description" content="Cinematic video editor & colorist specializing in Premiere Pro, DaVinci Resolve, After Effects & Photoshop. Crafting high-quality commercials, vlogs, reels & motion graphics.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBg: '#0b0b0d',
+            brandSurface: '#121215',
+            brandCyan: '#06b6d4',
+            brandPurple: '#a855f7',
+            brandAmber: '#f59e0b',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brandBg text-gray-100 min-h-screen flex flex-col selection:bg-brandCyan selection:text-black">
+
+  <!-- Custom Cursor Glow effect (handled in main.js) -->
+
+  <!-- Navigation Bar -->
+  <header id="navbar-header" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-tr from-brandCyan to-brandPurple flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+          <i class="fas fa-film text-black font-bold text-lg"></i>
+        </div>
+        <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent group-hover:from-brandCyan group-hover:to-brandPurple transition-all">
+          MASTER
+        </span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold tracking-wide text-zinc-300">
+        <a href="index.html" class="text-brandCyan border-b-2 border-brandCyan pb-1">Home</a>
+        <a href="portfolio.html" class="hover:text-brandCyan transition-colors pb-1">Portfolio</a>
+        <a href="about.html" class="hover:text-brandCyan transition-colors pb-1">About Me</a>
+        <a href="contact.html" class="hover:text-brandCyan transition-colors pb-1">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="https://wa.me/94767844901" target="_blank" class="px-5 py-2 rounded-lg bg-zinc-800 text-zinc-300 border border-zinc-700 text-sm font-semibold hover:border-brandCyan hover:text-white transition-all hover:glow-cyan flex items-center space-x-2">
+          <i class="fab fa-whatsapp text-green-500"></i>
+          <span>Let's Talk</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-zinc-300 hover:text-white focus:outline-none p-2" aria-label="Toggle menu">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-zinc-800/50 absolute top-full left-0 w-full p-6 space-y-4">
+      <nav class="flex flex-col space-y-4 text-zinc-300 font-medium">
+        <a href="index.html" class="text-brandCyan border-l-2 border-brandCyan pl-3 py-1">Home</a>
+        <a href="portfolio.html" class="hover:text-brandCyan pl-3 py-1 transition-colors">Portfolio</a>
+        <a href="about.html" class="hover:text-brandCyan pl-3 py-1 transition-colors">About Me</a>
+        <a href="contact.html" class="hover:text-brandCyan pl-3 py-1 transition-colors">Contact</a>
+      </nav>
+      <div class="pt-4 border-t border-zinc-800 flex flex-col space-y-3">
+        <a href="https://wa.me/94767844901" target="_blank" class="w-full justify-center px-4 py-2.5 rounded-lg bg-zinc-800 text-zinc-300 border border-zinc-700 text-sm font-semibold hover:border-brandCyan hover:text-white transition-all flex items-center space-x-2">
+          <i class="fab fa-whatsapp text-green-500"></i>
+          <span>WhatsApp Chat</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-36 pb-20 md:pt-48 md:pb-28 overflow-hidden">
+    <!-- Ambient Background Light -->
+    <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brandCyan/10 blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-brandPurple/10 blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Left Info -->
+      <div class="lg:col-span-7 space-y-6 text-left">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-full text-xs text-brandCyan font-semibold tracking-wider uppercase">
+          <span class="w-2 h-2 rounded-full bg-brandCyan animate-ping"></span>
+          <span>Open for Freelance Work</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+          CRAFTING CINEMATIC <br>
+          <span class="bg-gradient-to-r from-brandCyan via-brandPurple to-brandAmber bg-clip-text text-transparent">STORYTELLING</span>
+        </h1>
+        <p class="text-lg md:text-xl text-zinc-400 leading-relaxed font-light">
+          Hi! I am a professional <span id="typing-text" data-words='["Video Editor", "Color Grader", "After Effects Designer", "Photoshop Expert"]' class="text-brandCyan font-semibold typing-cursor"></span>. I turn raw footage into stunning, high-retention visual masterpieces that capture audiences.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="portfolio.html" class="px-8 py-3.5 bg-gradient-to-r from-brandCyan to-brandPurple text-black font-extrabold rounded-xl hover:scale-[1.03] transition-transform shadow-lg glow-cyan flex items-center space-x-2">
+            <span>Explore Portfolio</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="contact.html" class="px-8 py-3.5 bg-zinc-900 text-zinc-300 border border-zinc-800 font-extrabold rounded-xl hover:border-brandPurple hover:text-white transition-all flex items-center space-x-2">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- Mini Stats -->
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-zinc-800/80 max-w-lg">
+          <div>
+            <h3 class="text-2xl font-bold text-white">1+</h3>
+            <p class="text-xs text-zinc-500 uppercase tracking-widest mt-1">Years Experience</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">150+</h3>
+            <p class="text-xs text-zinc-500 uppercase tracking-widest mt-1">Projects Completed</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-white">100%</h3>
+            <p class="text-xs text-zinc-500 uppercase tracking-widest mt-1">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Interactive Screen Mockup -->
+      <div class="lg:col-span-5 relative">
+        <div class="absolute inset-0 bg-gradient-to-tr from-brandCyan/20 to-brandPurple/20 rounded-2xl blur-2xl opacity-60"></div>
+        <div class="relative glass-panel rounded-2xl p-2.5 overflow-hidden shadow-2xl border border-zinc-700/50 group">
+          <!-- Window header buttons -->
+          <div class="flex items-center space-x-2 px-3 pb-2.5 border-b border-zinc-850">
+            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+            <span class="text-xs text-zinc-500 font-mono ml-4">edit_timeline.prproj</span>
+          </div>
+          <!-- Hero background graphic generated -->
+          <div class="aspect-video w-full rounded-lg overflow-hidden relative">
+            <img src="assets/hero_background.png" alt="Video Editing Studio Setup" class="w-full h-full object-cover">
+            <!-- Glass Overlay Card representing tools -->
+            <div class="absolute bottom-4 left-4 right-4 glass-panel p-3 rounded-xl flex items-center justify-between border border-white/10 animate-float">
+              <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-lg bg-zinc-950 flex items-center justify-center">
+                  <i class="fas fa-play text-xs text-brandCyan"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-white">Cinematic Grade.mp4</h4>
+                  <p class="text-[10px] text-zinc-400">Rendering project files...</p>
+                </div>
+              </div>
+              <span class="text-xs font-mono font-bold text-brandCyan bg-brandCyan/10 px-2 py-0.5 rounded">98%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Software Stack Badges -->
+  <section class="py-12 border-t border-b border-zinc-900 bg-zinc-950/50">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row md:items-center justify-between gap-8">
+      <div>
+        <h2 class="text-xl font-bold tracking-tight text-white">PRO EDITING ENGINE</h2>
+        <p class="text-sm text-zinc-500">I use industry-standard software to deliver elite quality.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full md:w-auto">
+        <!-- Premiere Pro -->
+        <div class="flex items-center space-x-3 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl hover-glow-cyan">
+          <div class="w-8 h-8 bg-blue-900/60 rounded flex items-center justify-center font-bold text-cyan-400 text-sm border border-blue-500/40">Pr</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Premiere Pro</h4>
+            <p class="text-[10px] text-zinc-500">Timeline & Assembly</p>
+          </div>
+        </div>
+        <!-- After Effects -->
+        <div class="flex items-center space-x-3 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl hover-glow-purple">
+          <div class="w-8 h-8 bg-purple-900/60 rounded flex items-center justify-center font-bold text-purple-400 text-sm border border-purple-500/40">Ae</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">After Effects</h4>
+            <p class="text-[10px] text-zinc-500">VFX & Animation</p>
+          </div>
+        </div>
+        <!-- DaVinci Resolve -->
+        <div class="flex items-center space-x-3 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl hover-glow-cyan">
+          <div class="w-8 h-8 bg-teal-900/60 rounded flex items-center justify-center font-bold text-teal-400 text-sm border border-teal-500/40">Dr</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">DaVinci Resolve</h4>
+            <p class="text-[10px] text-zinc-500">Colorist Suite</p>
+          </div>
+        </div>
+        <!-- Photoshop -->
+        <div class="flex items-center space-x-3 px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-xl hover-glow-amber">
+          <div class="w-8 h-8 bg-amber-950/60 rounded flex items-center justify-center font-bold text-amber-500 text-sm border border-amber-500/40">Ps</div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Photoshop</h4>
+            <p class="text-[10px] text-zinc-500">Thumbnails & Design</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Before/After Color Grading Comparison Slider -->
+  <section class="py-20 max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Color Grading Mastery</h2>
+      <p class="text-zinc-400">See how raw flat LOG footage gets converted into cinematic, storytelling visual moods in DaVinci Resolve. Drag the slider to compare.</p>
+    </div>
+
+    <!-- Color Slider Container -->
+    <div class="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+      <!-- Behind Image: RAW flat footage (simulate with styling filter or generate_image, wait! We can overlay the thumb_commercial image and apply custom filters) -->
+      <!-- Let's use the sports car image we generated for both but apply styles! Under-saturated & low-contrast (raw LOG) in the background, and rich glowing color grading in the foreground -->
+      <div class="absolute inset-0 bg-zinc-900">
+        <!-- Raw Flat version -->
+        <img src="assets/thumb_commercial.png" alt="Raw LOG commercial frame" class="w-full h-full object-cover saturate-50 contrast-75 brightness-110 blur-[1px]">
+        <div class="absolute top-4 left-4 bg-black/60 text-zinc-400 text-xs px-3 py-1.5 rounded border border-zinc-800 font-mono">RAW FOOTAGE (LOG)</div>
+      </div>
+
+      <!-- Forefront Image: Graded version -->
+      <div id="graded-img" class="absolute inset-0 clip-path-graded" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);">
+        <img src="assets/thumb_commercial.png" alt="Cinematic graded commercial frame" class="w-full h-full object-cover">
+        <div class="absolute top-4 right-4 bg-brandCyan/20 text-brandCyan text-xs px-3 py-1.5 rounded border border-brandCyan/30 font-mono backdrop-blur">RESOLVE GRADED (REC709)</div>
+      </div>
+
+      <!-- Slider Input Overlapping -->
+      <input type="range" min="0" max="100" value="50" id="color-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20">
+
+      <!-- Custom Handle Line -->
+      <div id="slider-handle" class="absolute top-0 bottom-0 w-0.5 bg-brandCyan pointer-events-none z-10 shadow-[0_0_10px_rgba(6,182,212,0.8)]" style="left: 50%;">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-brandCyan border-4 border-zinc-950 flex items-center justify-center shadow-lg pointer-events-none text-zinc-950">
+          <i class="fas fa-arrows-alt-h text-xs"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Services Grid -->
+  <section class="py-20 bg-zinc-950/30 border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <span class="text-brandCyan text-xs uppercase tracking-widest font-extrabold">Professional Services</span>
+          <h2 class="text-3xl md:text-5xl font-bold mt-2">What I Can Do For You</h2>
+        </div>
+        <p class="text-zinc-400 max-w-md mt-4 md:mt-0 font-light">
+          Whether it is short-form reels that get millions of views, or professional commercials and vlogs, I deliver retention-focused edits.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="glass-panel p-8 rounded-2xl border border-zinc-800/80 hover:border-brandCyan/30 hover:scale-[1.02] transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-brandCyan/10 border border-brandCyan/20 flex items-center justify-center text-brandCyan text-xl mb-6 group-hover:bg-brandCyan group-hover:text-black transition-all">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-white">Full Video Editing</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+            Polishing raw footage into engaging stories. Ideal for YouTube creators, Vlogs, Corporate promos, and travel cinematography. Dynamic pacing and seamless cuts.
+          </p>
+          <ul class="text-xs text-zinc-500 space-y-2">
+            <li><i class="fas fa-check text-brandCyan mr-2"></i> Pacing & Sequence Assembly</li>
+            <li><i class="fas fa-check text-brandCyan mr-2"></i> Audio Enhancement & Mixing</li>
+            <li><i class="fas fa-check text-brandCyan mr-2"></i> Dynamic Text & Subtitles</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="glass-panel p-8 rounded-2xl border border-zinc-800/80 hover:border-brandPurple/30 hover:scale-[1.02] transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-brandPurple/10 border border-brandPurple/20 flex items-center justify-center text-brandPurple text-xl mb-6 group-hover:bg-brandPurple group-hover:text-black transition-all">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-white">Colorist Suite</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+            DaVinci Resolve professional color correction and creative grading. Matching cameras, enhancing moods, and making your shots pop with cinematic styles.
+          </p>
+          <ul class="text-xs text-zinc-500 space-y-2">
+            <li><i class="fas fa-check text-brandPurple mr-2"></i> Camera Color Profiling</li>
+            <li><i class="fas fa-check text-brandPurple mr-2"></i> Shot Matching & Correction</li>
+            <li><i class="fas fa-check text-brandPurple mr-2"></i> Creative Color Grading (LUTs)</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="glass-panel p-8 rounded-2xl border border-zinc-800/80 hover:border-brandAmber/30 hover:scale-[1.02] transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-brandAmber/10 border border-brandAmber/20 flex items-center justify-center text-brandAmber text-xl mb-6 group-hover:bg-brandAmber group-hover:text-black transition-all">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-white">VFX & Short Form</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+            High-retention editing for TikTok, YouTube Shorts, and Instagram Reels. Adding custom transitions, text tracking, VFX, and audio sound effects to keep users hooked.
+          </p>
+          <ul class="text-xs text-zinc-500 space-y-2">
+            <li><i class="fas fa-check text-brandAmber mr-2"></i> 9:16 Viral Reels Optimization</li>
+            <li><i class="fas fa-check text-brandAmber mr-2"></i> Motion Graphics & Typography</li>
+            <li><i class="fas fa-check text-brandAmber mr-2"></i> Custom Sound Effects (SFX)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Portfolio Grid Section -->
+  <section class="py-20 max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-brandCyan text-xs uppercase tracking-widest font-extrabold">Recent Cuts</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h2>
+      </div>
+      <a href="portfolio.html" class="mt-4 md:mt-0 px-5 py-2.5 bg-zinc-900 border border-zinc-800 text-zinc-300 font-semibold rounded-xl hover:border-brandCyan hover:text-white transition-all flex items-center space-x-2 text-sm">
+        <span>View All Projects</span>
+        <i class="fas fa-chevron-right text-xs"></i>
+      </a>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Project 1 -->
+      <div class="video-card relative group rounded-2xl overflow-hidden border border-zinc-800 bg-brandSurface shadow-lg hover-glow-cyan">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/thumb_commercial.png" alt="Commercial Edit Frame" class="w-full h-full object-cover transition-transform duration-500">
+          <div class="video-overlay absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <a href="#" class="open-modal w-14 h-14 rounded-full bg-brandCyan text-black flex items-center justify-center shadow-lg transition-transform hover:scale-110" 
+               data-title="Cinematic Sports Car Commercial"
+               data-desc="This commercial showcases custom transitions, high-speed sound design, dynamic speed ramping, and heavy DaVinci Resolve color grading to evoke a fast-paced cyberpunk night theme."
+               data-tools="Premiere Pro, DaVinci Resolve, Audition"
+               data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> <!-- Dummy link for template, code handles it -->
+              <i class="fas fa-play text-lg ml-0.5"></i>
+            </a>
+          </div>
+          <span class="absolute bottom-3 left-3 px-2 py-0.5 bg-black/70 text-[10px] tracking-wider rounded font-mono text-zinc-300">COMMERCIAL</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-white mb-2">Cinematic Sports Car Promo</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed">
+            High energy, automotive styling, dynamic audio tracks, and premium color matching.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="video-card relative group rounded-2xl overflow-hidden border border-zinc-800 bg-brandSurface shadow-lg hover-glow-purple">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/thumb_travel.png" alt="Travel Vlog Edit Frame" class="w-full h-full object-cover transition-transform duration-500">
+          <div class="video-overlay absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <a href="#" class="open-modal w-14 h-14 rounded-full bg-brandPurple text-white flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+               data-title="Epic Alpine Travel Vlog"
+               data-desc="A cinematic storytelling journey through the Alps. Created for a travel channel with focus on scenery, sound design, soundscapes, and stabilization edits."
+               data-tools="Premiere Pro, After Effects, Photoshop"
+               data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+              <i class="fas fa-play text-lg ml-0.5"></i>
+            </a>
+          </div>
+          <span class="absolute bottom-3 left-3 px-2 py-0.5 bg-black/70 text-[10px] tracking-wider rounded font-mono text-zinc-300">TRAVEL / VLOG</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-white mb-2">Epic Alpine Travel Vlog</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed">
+            Story-focused pacing, immersive soundscapes, digital stabilization, and thumbnail design.
+          </p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="video-card relative group rounded-2xl overflow-hidden border border-zinc-800 bg-brandSurface shadow-lg hover-glow-amber">
+        <div class="relative aspect-video overflow-hidden">
+          <img src="assets/thumb_music.png" alt="Music Video Edit Frame" class="w-full h-full object-cover transition-transform duration-500">
+          <div class="video-overlay absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <a href="#" class="open-modal w-14 h-14 rounded-full bg-brandAmber text-black flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+               data-title="Neon Cyberpunk Music Video"
+               data-desc="This music video editing project integrates cyberpunk neon overlay designs, rotoscoping, glitch VFX transistions, and beat-matched cuts."
+               data-tools="Premiere Pro, After Effects, DaVinci Resolve"
+               data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+              <i class="fas fa-play text-lg ml-0.5"></i>
+            </a>
+          </div>
+          <span class="absolute bottom-3 left-3 px-2 py-0.5 bg-black/70 text-[10px] tracking-wider rounded font-mono text-zinc-300">MUSIC VIDEO</span>
+        </div>
+        <div class="p-6">
+          <h3 class="text-lg font-bold text-white mb-2">Neon Cyberpunk Music Cut</h3>
+          <p class="text-zinc-400 text-xs leading-relaxed">
+            VFX transitions, audio beat synchronization, mask tracking, and color glow grading.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box / Contact Banner -->
+  <section class="py-16 max-w-7xl mx-auto px-6">
+    <div class="relative rounded-3xl overflow-hidden border border-zinc-800/80 p-8 md:p-16 text-center shadow-2xl">
+      <!-- Background gradient layout -->
+      <div class="absolute inset-0 bg-gradient-to-tr from-brandBg via-zinc-950 to-brandPurple/10 z-0"></div>
+      <div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-brandCyan/10 blur-[80px] z-0"></div>
+      <div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-brandPurple/10 blur-[80px] z-0"></div>
+
+      <div class="relative z-10 max-w-2xl mx-auto space-y-6">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white">Let's Create Something <span class="bg-gradient-to-r from-brandCyan to-brandPurple bg-clip-text text-transparent">LEGENDARY</span></h2>
+        <p class="text-zinc-400 text-sm md:text-base font-light">
+          Have an upcoming video project, channel to grow, or commercial that needs professional editing? Tell me your vision and let me turn it into gold.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="https://wa.me/94767844901" target="_blank" class="px-8 py-3.5 bg-green-500 hover:bg-green-600 text-black font-extrabold rounded-xl transition-all shadow-[0_0_20px_rgba(34,197,94,0.3)] flex items-center space-x-2">
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span>Chat on WhatsApp</span>
+          </a>
+          <a href="contact.html" class="px-8 py-3.5 bg-zinc-900 border border-zinc-800 text-zinc-300 font-extrabold rounded-xl hover:border-brandCyan hover:text-white transition-all flex items-center space-x-2">
+            <span>Send Direct Inquiry</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto border-t border-zinc-900 bg-zinc-950 py-12 text-zinc-400 text-sm">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="space-y-4 md:col-span-2">
+        <div class="flex items-center space-x-3">
+          <div class="w-8 h-8 rounded bg-gradient-to-tr from-brandCyan to-brandPurple flex items-center justify-center">
+            <i class="fas fa-film text-black text-sm"></i>
+          </div>
+          <span class="text-white font-bold tracking-widest">MASTER</span>
+        </div>
+        <p class="max-w-sm text-xs text-zinc-500 leading-relaxed">
+          Professional post-production suite offering full scale video editing, Davinci Resolve color grading, motion graphics, and YouTube optimization.
+        </p>
+        <!-- Social Networks styled beautifully -->
+        <div class="flex space-x-4 pt-2">
+          <a href="https://www.facebook.com/profile.php?id=61557876916887" target="_blank" class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:border-brandCyan hover:text-brandCyan transition-all" aria-label="Facebook">
+            <i class="fab fa-facebook-f text-xs"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:border-red-500 hover:text-red-500 transition-all" aria-label="YouTube">
+            <i class="fab fa-youtube text-xs"></i>
+          </a>
+          <a href="https://tiktok.com" target="_blank" class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:border-white hover:text-white transition-all" aria-label="TikTok">
+            <i class="fab fa-tiktok text-xs"></i>
+          </a>
+          <a href="https://wa.me/94767844901" target="_blank" class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center hover:border-green-500 hover:text-green-500 transition-all" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp text-xs"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Navigation</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="index.html" class="hover:text-brandCyan transition-colors">Home</a></li>
+          <li><a href="portfolio.html" class="hover:text-brandCyan transition-colors">Portfolio</a></li>
+          <li><a href="about.html" class="hover:text-brandCyan transition-colors">About Me</a></li>
+          <li><a href="contact.html" class="hover:text-brandCyan transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-4 uppercase tracking-widest text-xs">Contact Info</h4>
+        <ul class="space-y-2 text-xs text-zinc-500">
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-envelope text-brandCyan text-xs"></i>
+            <span>info@creativecuts.com</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-phone text-brandCyan text-xs"></i>
+            <span>+94 76 784 4901</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-map-marker-alt text-brandCyan text-xs"></i>
+            <span>Colombo, Sri Lanka</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-8 pt-8 border-t border-zinc-900 text-center text-xs text-zinc-650 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Master. All rights reserved. Designed for video excellence.</p>
+      <p class="text-[10px] text-zinc-600">Built using Tailwind CSS & Vanilla JS (No Node.js)</p>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky WhatsApp button widget -->
+  <a href="https://wa.me/94767844901" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center group cursor-pointer" aria-label="Quick WhatsApp Contact">
+    <!-- Bubble text -->
+    <span class="mr-3 bg-zinc-950/90 text-white border border-zinc-800 text-xs px-3 py-1.5 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold whitespace-nowrap backdrop-blur">
+      Chat with me! Ã°Å¸â€˜â€¹
+    </span>
+    <!-- Glowing Pulsing Icon -->
+    <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center text-white shadow-2xl animate-pulse-glow hover:scale-110 transition-transform duration-300 wobble-hover">
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </div>
+  </a>
+
+  <!-- Video Details Modal Container (Shared Across Pages) -->
+  <div id="video-modal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="relative bg-zinc-950/80 border border-zinc-800 max-w-4xl w-full rounded-2xl overflow-hidden glass-panel flex flex-col max-h-[90vh]">
+      <!-- Close Button -->
+      <button id="modal-close" class="absolute top-4 right-4 text-zinc-400 hover:text-white bg-zinc-900/60 p-2 rounded-full z-10 transition-colors">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+
+      <!-- Video viewport -->
+      <div id="modal-frame-container" class="w-full bg-black">
+        <!-- Rendered dynamically by JS -->
+      </div>
+
+      <!-- Description content -->
+      <div class="p-6 md:p-8 space-y-4 overflow-y-auto">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <h2 id="modal-title" class="text-xl md:text-2xl font-bold text-white">Project Title</h2>
+          <!-- Tools badges -->
+          <div id="modal-tools" class="flex flex-wrap gap-2">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+        <p id="modal-desc" class="text-zinc-400 text-sm md:text-base leading-relaxed">
+          Description content goes here...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom main.js script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
